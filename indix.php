@@ -13,7 +13,7 @@
 
    $total=$p1+$p2+$p3+$p4+$p5+$p6+$p7+$p8+$p9+$p10;
 
-    echo('valor maximo<br/><br/>Factura de Compra<br/>'.$n1.'= '.$p1.'<br/>'.$n2.'= '.$p2
+    echo('valor maximo 80000<br/><br/>Factura de Compra<br/>'.$n1.'= '.$p1.'<br/>'.$n2.'= '.$p2
             .'<br/>'.$n3.'= '.$p3.'<br/>'.$n4.'= '.$p4.
         '<br/>'.$n5.'= '.$p5.'<br/>'.$n6.'= '.$p6.
         '<br/>'.$n7.'= '.$p7.'<br/>'.$n8.'= '.$p8.
