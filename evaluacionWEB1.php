@@ -50,7 +50,7 @@
     </div>
     <div class="col-12 text-center" style="width: 18rem;">
     <br>
-    <a href="#" name="but" class="btn btn-primary width-30" type="submit" style="width:30%">Sumar</a>
+    <a href="#" name="but" class="btn btn-primary width-30" type="submit" style="width:30%">Operar</a>
     </div>
   </div>
 </div>

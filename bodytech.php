@@ -32,7 +32,7 @@
 
 <form action="evaluacionWEB1.php" method="get">
 <div class="card ">
-  <h5 class="card-header text-center">Ejercisio de Suma</h5>
+  <h5 class="card-header text-center">BodyTech</h5>
   <div class="card-body row">
   <div class="card col-md-4 col-sm-12 cent" style="width: 18rem;">
     <h5 class="card-title">Nombre del Usuario</h5>
