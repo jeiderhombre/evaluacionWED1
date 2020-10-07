@@ -39,7 +39,7 @@
 </nav>
 </header>
 <main>
-  <form action="amor.php" mathod="POST">
+  <form action="amor.php" method="POST">
     <div class="card">
       <h5 class="card-header text-center">Spring Step</h5>
       <div class="card-body">
@@ -55,10 +55,10 @@
             <label for="zapatos">Zapatos:</label>
             <select name="zapa" class="form-control width-30" style="width: 18rem;" >
               <option>seleciona</option>
-              <option value="zapatos hombres">zapatos hombres</option>
-              <option value="zapatos dama">zapatos dama</option>
-              <option value="zapatos deportivos">zapatos deportivos</option>
-              <option value="zapatos variados">zapatos variados</option>
+              <option value="hombres">zapatos hombres</option>
+              <option value="dama">zapatos dama</option>
+              <option value="deportivos">zapatos deportivos</option>
+              <option value="variados">zapatos variados</option>
             </select>
           </div>
           <div class="card col-md-6 col-sm-12">
@@ -75,20 +75,10 @@
             <button name="but" class="btn btn-primary width-30" type="submit" style="width:30%">Cotisar</button>
           </div>
         </div>
-  <!--
- Defina la cantidad de variables que necesite,
-el costo de cada par de zapatos y establezca el valor
-total de la compra de zapatos.-->
       </div>
     </div>
   </form>
-</main>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-</body>
-<?php
+  <?php
   if(isset($_POST["but"])){
     $zapa = $_POST['zapa'];
     $cint = $_POST['cant'];
@@ -102,20 +92,18 @@ total de la compra de zapatos.-->
       break; case 'variados': $valor=100000;
       break;  
     }
-    if($cint>=1 && $cint==2){
-      $total=$cint*$valor;
-    }elseif($cint==3){
-      $total=$cint*$valor;
-      $total-=($total*10)/100;
-    }elseif($cint>3 && $cint<8){
-      $total=$cint*$valor;
-      $total-=($total*20)/100;
+    if($cint>0 && $cint<=2){
+      $total=$valor*$cint;
+    }else if($cint==3){
+      $total=$valor*$cint;
+      $total-=$total/100*10;
+    }else if($cint>3 && $cint<=8){
+      $total=$valor*$cint;
+      $total-=$total/100*20;
     }else{
-      $total=$cint*$valor;
-      $total-=($total*50)/100;
+      $total=$valor*$cint;
+      $total-=$total/100*50;
     }
-  }
-  if(isset($_POST["but"])){
     echo("<div class='coitainer-fluid card'>
             <h3 class='card-header'><center>Cotizcion</center></h3>
             <div class='card-body'>
@@ -142,6 +130,12 @@ total de la compra de zapatos.-->
           </div>");
   }
 ?>
+</main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
 </html>
 <!--
   3.Codificar un programa en PHP para la tienda Spring Step que
