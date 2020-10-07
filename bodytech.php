@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BodyTech</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="jeicss,css" type="text/css" media="screen">
+    <link rel="stylesheet" href="jeicss.css" type="text/css" media="screen">
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -30,6 +30,9 @@
       <li class="nav-item">
         <a class="nav-link" href="areglo.php">Bancolombia</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="calcularSalario.php">Calcular Salario</a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -52,7 +55,7 @@
         <h5 class="card-title">Altura del Usuario</h5>
         <label form="altura">Altura: <input name="alt" type="number"></label>
       </div>
-  
+
       <div class="col-12 text-center cent" style="width: 18rem;">
         <br>
         <button name="but" class="btn btn-primary width-30" type="submit" style="width:30%">Sumar</button>
@@ -60,6 +63,7 @@
     </div>
   </div>
 </form>
+
 <!--
 function FigureBMImet(form, cm, kg) {
                     Meters = eval(cm)/100;
@@ -70,11 +74,12 @@ function FigureBMImet(form, cm, kg) {
       if(isset($_POST["but"])){
         $pes =$_POST["pes"];
         $alt =$_POST["alt"];
+        if($pes!=0 && $alt!=0){
         $alt/=100;
         $masa = $alt*$alt;
         $masa = (($pes*10)/$masa)/10;
         echo("<div style='text-align: center;'>
-        <label >$masa</label><br/><br/>");
+        <label >".round($masa, 2)."</label><br/><br/>");
         if($masa < 18.5){
           print("peso insuficiente");
         }else if($masa<=24.9){
@@ -93,6 +98,8 @@ function FigureBMImet(form, cm, kg) {
           echo("obesidad tipo 4(extrema)</div>");
         }
       }
+      }
     ?>
 </body>
+
 </html>

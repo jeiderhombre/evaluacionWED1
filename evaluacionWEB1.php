@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EvaluacionWEB1</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="jeicss.css" type="text-css" media="screen">
+    <link rel="stylesheet" href="jeicss.css" type="text/css" media="screen">
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -29,6 +29,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="areglo.php">Bancolombia</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="calcularSalario.php">Calcular Salario</a>
       </li>
     </ul>
   </div>

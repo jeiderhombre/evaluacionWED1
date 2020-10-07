@@ -31,6 +31,9 @@
       <li class="nav-item">
         <a class="nav-link" href="areglo.php">Bancolombia</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="calcularSalario.php">Calcular Salario</a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -122,6 +125,7 @@
     $proNo[$con]=$_POST['pro3'];
     $valPr[$con]=$_POST['val3'];
     $con++;
+    if($proNo[0]!='' && $valPr[0]!=0){
     foreach($valPr as $nume){
       $total+=$nume;
     }
@@ -182,6 +186,7 @@
             </div>
             <h5 class='card-header'><center>Total: ".$total." ".$men."</center></h5>
           </div>");
+        }
   }
   ?>
      
