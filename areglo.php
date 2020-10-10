@@ -34,6 +34,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="calcularSalario.php">Calcular Salario</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="erika.php">Erika</a>
+            </li>
             </ul>
         </div>
     </nav>
