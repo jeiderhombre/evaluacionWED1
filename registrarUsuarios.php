@@ -14,5 +14,7 @@
         $consultasql="INSERT INTO usuarios(nombre, apellido, descripcion, genero) VALUES ('$nombre','$apell','$descri','$genero')";
 
         $consion->agregarDatos($consultasql);
+
+
     }
 ?>

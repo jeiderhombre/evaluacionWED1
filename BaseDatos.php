@@ -36,5 +36,22 @@
                 echo("error");
             }
         }
+
+        public function buscarDatos($consultarsql){
+            //nos conectamos a la base de datos
+            $conexionBD= $this->conectarBD();
+
+            //consultar la base de datos
+            $contarBuscarDatos= $conexionBD->prepare($consultarsql);
+
+            //indicar como queremos traer datos
+            $contarBuscarDatos->setFetchMode(PDO::FETCH_ASSOC);
+
+            //ejecutamos
+            $contarBuscarDatos->execute();
+
+            //mostrar en pantalla
+            return($contarBuscarDatos->fetchAll());
+        }
     }
 ?>
