@@ -53,5 +53,23 @@
             //mostrar en pantalla
             return($contarBuscarDatos->fetchAll());
         }
+
+        public function eliminarDatos($consultarsql){
+            //nos conectamos a la base de datos
+            $conexionBD= $this->conectarBD();
+
+            //consultar la base de datos
+            $contarEliminarDatos= $conexionBD->prepare($consultarsql);
+
+            //ejecutar la consulta
+            $resultado =$contarEliminarDatos->execute();
+
+            //comprobar datos
+            if($resultado){
+                echo("exito eliminar datos");
+            }else{
+                echo("error");
+            }
+        }
     }
 ?>

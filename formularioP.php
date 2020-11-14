@@ -34,6 +34,13 @@
                 </div>
                 
                 <div class="row mt-3">
+                    <div class="col">
+                        <label class="font-weight-bold">FOTO:</label>
+                        <input type="text" class="form-control" placeholder="Foto URL" name="foto">
+                    </div>
+                </div>
+                
+                <div class="row mt-3">
                     <div class="col align-self-end">
                         <label class="font-weight-bold">Sexo: </label>
                         <div class="form-check form-check-inline">
