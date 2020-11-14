@@ -42,7 +42,47 @@
         </nav>
     </header>
     <main>
-
+        <form action="erika.php" method="POST">
+            <div class="card conten-fluid" style="text-align: center">
+                <h5 class="card-header">Calcula ganacia</h5>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="card col-md-6 col-sm-12 cent" style="width: 18rem;">
+                            <h5 class="card-title">referencia producto</h5>
+                            <label form="nombre">Nombre: <input name="nombre" type="text" require></label>
+                        </div>
+                        <div class="card col-md-6 col-sm-12 cent" style="width: 18rem;">
+                            <h5 class="card-title">valor producto</h5>
+                            <label form="telefono">valor: <input name="telfo" type="number" require></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class=" col-md-4 col-sm-12 text-center cent" style="width: 18rem;">
+                            <button name="but" class="btn btn-primary width-30" type="submit" style="width:30%">Añadir</button>
+                        </div>
+                        <div class=" col-md-4 col-sm-12 text-center cent" style="width: 18rem;">
+                            <button name="but1" class="btn btn-primary width-30" type="submit" style="width:30%">Ver</button>
+                        </div>
+                        <div class=" col-md-4 col-sm-12 text-center cent" style="width: 18rem;">
+                            <button name="but2" class="btn btn-primary width-30" type="submit" style="width:30%">Borrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php
+                $con;
+                if(isset($_POST["but"])){
+                    if(empty($con)==true) $con=0;
+                    $conte = mysql_connect('localhost', 'root', '');
+                    if(!$conte){
+                        echo("error de conecion");
+                    }else{
+                        $base=mysql_select_db('prueba');
+                        if(!$base) echo('no se encontro data base');
+                    } 
+                }
+            ?>
+        </form>
     </main>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
