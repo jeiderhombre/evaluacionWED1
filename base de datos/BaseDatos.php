@@ -71,5 +71,23 @@
                 echo("error");
             }
         }
+
+        public function editarDatos($consultarsql){
+             //nos conectamos a la base de datos
+             $conexionBD= $this->conectarBD();
+
+             //consultar la base de datos
+             $contarEditarDatos= $conexionBD->prepare($consultarsql);
+ 
+             //ejecutar la consulta
+             $resultado =$contarEditarDatos->execute();
+ 
+             //comprobar datos
+             if($resultado){
+                 echo("exito editando datos");
+             }else{
+                 echo("error");
+             }
+        }
     }
 ?>
