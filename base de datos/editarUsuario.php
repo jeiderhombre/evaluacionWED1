@@ -6,7 +6,7 @@ if(isset($_POST['botonEnvio']))
     $nombre=$_POST['nombreEditar'];
     $descrip=$_POST['descripcionEditar'];
 
-    $id=$_GET[''];
+    $id=$_GET['id'];
     
     $cosultarSQL="UPDATE usuarios SET nombre='$nombre', descripcion='$descrip' WHERE ID_usuario='$id'";
 
